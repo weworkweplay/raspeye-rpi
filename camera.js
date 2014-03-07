@@ -66,10 +66,14 @@ syncPictures = function () {
     }
 
     if (files.length > 0) {
-      for (var i = 0; i < files.length; i++) {
+      var queueUpload = function (i) {
         setTimeout(function () {
           uploadPicture('/home/pi/images/' + files[i]);
         }, i * 200);
+      };
+
+      for (var i = 0; i < files.length; i++) {
+        queueUpload(i);
       }
     }
   });
