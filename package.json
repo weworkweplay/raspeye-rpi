@@ -1,0 +1,15 @@
+{
+  "name": "raspeye",
+  "version": "0.0.1",
+  "description": "Raspberry Pi camera streaming & timelapsing",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/weworkweplay/raspeye-rpi"
+  },
+  "scripts": {
+    "start": "node camera.js"
+  },
+  "dependencies": {
+    "request": "*"
+  }
+}

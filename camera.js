@@ -3,6 +3,10 @@ var sys = require('sys'),
     fs = require('fs'),
     exec = require('child_process').exec,
     api = 'http://link.to.api/',
+    auth = {
+      username: 'demo',
+      password: 'demo'
+    },
     burstMode = true,
     takePicture,
     uploadPicture,
@@ -29,7 +33,7 @@ uploadPicture = function (fileName) {
       if (response.statusCode === 200) {
         fs.unlink(fileName, function (err) {});
       }
-    }));
+    }).auth(auth.username, auth.password, true));
   });
 };
 

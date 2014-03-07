@@ -9,9 +9,10 @@ Create a low-cost webcam with the Raspberry Pi and the default RPi Camera board.
 3. Install Node (http://weworkweplay.com/play/raspberry-pi-nodejs/ - step 2)
 4. Install Forever (`$ sudo -i npm install -g forever`)
 5. Clone this repository onto your Raspberry Pi.
-6. If you want to post the images to your server, edit the API-variable in `camera.js`
-7. To have it run on startup, open crontab configuration: `$ crontab -u pi -e`
-8. Add the following line: `@reboot /usr/bin/sudo -u pi -H /usr/local/bin/forever start -a /home/pi/camera.js`
+6. Install dependencies (`$ npm install`)
+7. If you want to post the images to your server, edit the API-variable in `camera.js`
+8. To have it run on startup, open crontab configuration: `$ crontab -u pi -e`
+9. Add the following line: `@reboot /usr/bin/sudo -u pi -H /usr/local/bin/forever start -a /home/pi/camera.js`
 
 Note that if you're using a Raspberry Pi A, you have no ethernet port and you'll have to go through some trouble to set up automatic WiFi-connecting via a dongle if you want to push to a server.
 
