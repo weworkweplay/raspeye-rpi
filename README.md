@@ -1,6 +1,8 @@
 # RaspEye
 Create a low-cost webcam with the Raspberry Pi and the default RPi Camera board. By default, it stores your pictures on its SD-card, but there's an option to set an API URL and have all images uploaded to your server.
 
+[We published an example server and front-end setup here.](https://github.com/weworkweplay/raspeye-web)
+
 ## Setup
 1. Download NOOBS to SD-card
 2. Install Raspbian
